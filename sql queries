@@ -1,0 +1,127 @@
+--Number of rides per day per rider type--
+
+SELECT 
+	CASE strftime('%w', started_at)
+    WHEN '0' THEN 'Sunday'
+    WHEN '1' THEN 'Monday'
+    WHEN '2' THEN 'Tuesday'
+    WHEN '3' THEN 'Wednesday'
+    WHEN '4' THEN 'Thursday'
+    WHEN '5' THEN 'Friday'
+    WHEN '6' THEN 'Saturday'
+END AS day_of_week,
+	member_casual as rider_type,
+	COUNT(DISTINCT ride_id) AS number_of_rides
+FROM august24_september25
+GROUP BY day_of_week, rider_type
+ORDER BY strftime('%w', started_at);
+
+--Number of rides per month per rider type--
+SELECT
+	CASE strftime('%m', started_at)
+	    WHEN '01' THEN 'January'
+        WHEN '02' THEN 'February'
+        WHEN '03' THEN 'March'
+        WHEN '04' THEN 'April'
+        WHEN '05' THEN 'May'
+        WHEN '06' THEN 'June'
+        WHEN '07' THEN 'July'
+        WHEN '08' THEN 'August'
+        WHEN '09' THEN 'September'
+        WHEN '10' THEN 'October'
+        WHEN '11' THEN 'November'
+        WHEN '12' THEN 'December'
+        ELSE 'Invalid Month'
+	END AS month,
+		member_casual AS rider_type,
+		COUNT(DISTINCT ride_id) AS number_of_rides
+	FROM august24_september25
+	GROUP BY month, rider_type
+	ORDER BY strftime('%m', started_at);
+		
+		
+--Number of rides per season per rider type--
+SELECT
+      CASE
+        WHEN strftime('%m', started_at) IN ('12','01','02') THEN 'Winter'
+        WHEN strftime('%m', started_at) IN ('03','04','05') THEN 'Spring'
+        WHEN strftime('%m', started_at) IN ('06','07','08') THEN 'Summer'
+        WHEN strftime('%m', started_at) IN ('09','10','11') THEN 'Fall'
+    END AS season,
+	member_casual AS rider_type,
+		COUNT(DISTINCT ride_id) AS number_of_rides
+	FROM august24_september25
+	GROUP BY season, rider_type;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+--Average ride duration per day per rider type in minutes--
+SELECT
+CASE strftime('%w', started_at)
+    WHEN '0' THEN 'Sunday'
+    WHEN '1' THEN 'Monday'
+    WHEN '2' THEN 'Tuesday'
+    WHEN '3' THEN 'Wednesday'
+    WHEN '4' THEN 'Thursday'
+    WHEN '5' THEN 'Friday'
+    WHEN '6' THEN 'Saturday'
+	END AS day_of_week,
+	member_casual AS rider_type, 
+	ROUND (AVG((JULIANDAY(ended_at) - JULIANDAY(started_at)) * 1440), 2) AS average_ride_duration
+FROM august24_september25
+GROUP BY day_of_week, rider_type
+ORDER BY strftime('%w', started_at);
+	
+--Average ride duration per month per rider type--
+SELECT
+	CASE strftime('%m', started_at)
+	    WHEN '01' THEN 'January'
+        WHEN '02' THEN 'February'
+        WHEN '03' THEN 'March'
+        WHEN '04' THEN 'April'
+        WHEN '05' THEN 'May'
+        WHEN '06' THEN 'June'
+        WHEN '07' THEN 'July'
+        WHEN '08' THEN 'August'
+        WHEN '09' THEN 'September'
+        WHEN '10' THEN 'October'
+        WHEN '11' THEN 'November'
+        WHEN '12' THEN 'December'
+        ELSE 'Invalid Month'
+	END AS month,
+	member_casual As rider_type,
+	ROUND(AVG((JULIANDAY(ended_at) - JULIANDAY(started_at)) *1440),2) AS avergae_ride_duration
+FROM august24_september25
+GROUP BY month, rider_type
+ORDER BY strftime('%m', started_at);
+	
+
+--Average ride duration per day season rider type--
+SELECT
+      CASE
+        WHEN strftime('%m', started_at) IN ('12','01','02') THEN 'Winter'
+        WHEN strftime('%m', started_at) IN ('03','04','05') THEN 'Spring'
+        WHEN strftime('%m', started_at) IN ('06','07','08') THEN 'Summer'
+        WHEN strftime('%m', started_at) IN ('09','10','11') THEN 'Fall'
+    END AS season,
+	member_casual AS rider_type,
+	ROUND(AVG((JULIANDAY(ended_at) - JULIANDAY(started_at)) *1440),2) AS avergae_ride_duration
+FROM august24_september25
+GROUP BY season, rider_type
+ORDER BY strftime('%m', started_at);
+
+--Number of rides per rider type--
+SELECT
+	member_casual AS rider_type,
+	COUNT(DISTINCT ride_id) AS number_of_rides
+FROM august24_september25
+GROUP BY rider_type;
+
+--Number of rides per ride type--
+SELECT
+	rideable_type,
+	COUNT(DISTINCT ride_id) AS number_of_rides
+FROM august24_september25
+GROUP BY rideable_type;
+
+
+---Entire table---
+SELECT * FROM august24_september25;
