@@ -4,10 +4,9 @@ This project was the last course in the Google Data Analytics course on Coursera
 As my first data analysis project, it was a bit overwhelming at first as I did not really know where to start; I kept on reading the document over and over again, taking notes, having an idea of the information I needed to answer the business task but was a bit blocked on how to begin to tackle the large dataset I had to work with. 
 
 My intentions were:
+
 **Phase 1:** Complete the case study using a sample data size – I started with this method to help myself get a hang of managing data and getting insights from said data. (Completed September 14th, 2025). 
-
 **Phase 2:** Complete the case study using all the data using SQL and visualising on Tableau (Completed December 12th, 2025). 
-
 **Phase 3:** Compare the insights from Phases 1 and 2 to look at how using sample size data can affect results. 
 
 
