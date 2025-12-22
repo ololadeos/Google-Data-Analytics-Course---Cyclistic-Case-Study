@@ -6,7 +6,9 @@ As my first data analysis project, it was a bit overwhelming at first as I did n
 My intentions were:
 
 **Phase 1:** Complete the case study using a sample data size – I started with this method to help myself get a hang of managing data and getting insights from said data. (Completed September 14th, 2025). 
+
 **Phase 2:** Complete the case study using all the data using SQL and visualising on Tableau (Completed December 12th, 2025). 
+
 **Phase 3:** Compare the insights from Phases 1 and 2 to look at how using sample size data can affect results. 
 
 
@@ -19,6 +21,7 @@ The business task is to decipher how Casual Riders and Annual Members use Cyclis
 Data Sources used: The data used for this analysis project is found here: Cyclistic and the time period chosen was: August 2024 – July 2025 (12 months of Data). The data was made available by Motivate International Inc. under this license.  
 
 **Casual Riders:** Customers who purchase single-ride or full-day passes
+
 **Annual Members:** Customers who purchase annual memberships
 
 **Phase 1** – Completing the case study using a sample data size. 
