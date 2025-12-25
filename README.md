@@ -76,9 +76,11 @@ _IF(OR(MONTH(“STARTED_AT”)=12, MONTH(“STARTED_AT”)<=2), "Winter", IF(AND
 
 I compared the average ride durations for casual riders and members on a daily, monthly, and seasonal basis to understand the differences between them. This was achieved using pivot tables and an interactive dashboard.
 
-_Figure 1_ <img width="614" height="427" alt="image" src="https://github.com/user-attachments/assets/9355be39-0244-4e85-817f-a2687d00e1a6" />
-_Figure 2_ <img width="610" height="439" alt="image" src="https://github.com/user-attachments/assets/deef5707-38ec-451a-ab5e-3067a44b77a9" />
-_Figure 3_ <img width="611" height="431" alt="image" src="https://github.com/user-attachments/assets/04255cad-3f22-433d-8876-91de60dc867b" />
+_Figure 1: Average Daily Ride Duration_ <img width="614" height="427" alt="image" src="https://github.com/user-attachments/assets/9355be39-0244-4e85-817f-a2687d00e1a6" />
+
+_Figure 2: Average Monthly Ride Duration_ <img width="610" height="439" alt="image" src="https://github.com/user-attachments/assets/deef5707-38ec-451a-ab5e-3067a44b77a9" />
+
+_Figure 3: Average Seasonal Ride Duration_ <img width="611" height="431" alt="image" src="https://github.com/user-attachments/assets/04255cad-3f22-433d-8876-91de60dc867b" />
 
 
 📌 Recommendations
