@@ -7,13 +7,13 @@ This project is the final capstone of the Google Data Analytics Professional Cer
 As my first full project, the initial challenge was understanding how to approach a large dataset, structure the analysis, and translate business questions into actionable insights. To address this, I intentionally broke the project into phases to build confidence and technical depth over time.
 
 ## Project Phases
-Phase 1: Sample-based analysis using spreadsheets and R
+### Phase 1:Sample-based analysis using spreadsheets and R
 (Completed: September 14, 2025)
 
-Phase 2: Full dataset analysis using SQL and Tableau
+### Phase 2: Full dataset analysis using SQL and Tableau
 (Completed: December 12, 2025)
 
-Phase 3: Compare insights from sample vs full dataset to assess impact
+### Phase 3: Compare insights from sample vs full dataset to assess impact
 
 ## Case Study Background
 
