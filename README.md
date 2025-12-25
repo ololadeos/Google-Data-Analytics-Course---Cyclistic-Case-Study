@@ -1,16 +1,12 @@
 # Google-Data-Analytics-Course---Cyclistic-Case-Study
 
-Cyclistic Bike-Share Case Study
-
-Google Data Analytics Capstone Project
-
-Introduction
+## Introduction
 
 This project is the final capstone of the Google Data Analytics Professional Certificate (Coursera) and represents my first end-to-end data analytics case study using real-world data.
 
 As my first full project, the initial challenge was understanding how to approach a large dataset, structure the analysis, and translate business questions into actionable insights. To address this, I intentionally broke the project into phases to build confidence and technical depth over time.
 
-Project Phases
+## Project Phases
 Phase 1: Sample-based analysis using spreadsheets and R
 (Completed: September 14, 2025)
 
@@ -19,11 +15,11 @@ Phase 2: Full dataset analysis using SQL and Tableau
 
 Phase 3: Compare insights from sample vs full dataset to assess impact
 
-# Case Study Background
+## Case Study Background
 
 Cyclistic is a bike-share company based in Chicago. The company’s Director of Marketing believes that increasing annual memberships is key to long-term growth.
 
-Business Task
+## Business Task
 
 How do annual members and casual riders use Cyclistic bikes differently?
 
