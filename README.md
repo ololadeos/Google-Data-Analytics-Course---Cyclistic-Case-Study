@@ -69,14 +69,16 @@ Day_of_week	=TEXT(“started_at”, "dddd")
 Month_of_year	=TEXT(“started_at”, "mmmm")
 
 To determine the season, I assumed the following:
+
 <img width="635" height="72" alt="image" src="https://github.com/user-attachments/assets/ecef2760-ae3e-4a3f-bceb-57ec623bfc09" />
 
 _IF(OR(MONTH(“STARTED_AT”)=12, MONTH(“STARTED_AT”)<=2), "Winter", IF(AND(MONTH(“STARTED_AT”)>=3, MONTH(“STARTED_AT”)<=5), "Spring", IF(AND(MONTH(“STARTED_AT”)>=6, MONTH(“STARTED_AT”)<=8), "Summer", IF(AND(MONTH(“STARTED_AT”)>=9, MONTH(“STARTED_AT”)<=11), "Fall"))))_
 
 I compared the average ride durations for casual riders and members on a daily, monthly, and seasonal basis to understand the differences between them. This was achieved using pivot tables and an interactive dashboard.
 
-<img width="614" height="427" alt="image" src="https://github.com/user-attachments/assets/9355be39-0244-4e85-817f-a2687d00e1a6" />
-<img width="610" height="439" alt="image" src="https://github.com/user-attachments/assets/deef5707-38ec-451a-ab5e-3067a44b77a9" />
+_Figure 1_ <img width="614" height="427" alt="image" src="https://github.com/user-attachments/assets/9355be39-0244-4e85-817f-a2687d00e1a6" />
+_Figure 2_ <img width="610" height="439" alt="image" src="https://github.com/user-attachments/assets/deef5707-38ec-451a-ab5e-3067a44b77a9" />
+_Figure 3_ <img width="611" height="431" alt="image" src="https://github.com/user-attachments/assets/04255cad-3f22-433d-8876-91de60dc867b" />
 
 
 📌 Recommendations
