@@ -7,7 +7,7 @@ This project is the final capstone of the Google Data Analytics Professional Cer
 As my first full project, the initial challenge was understanding how to approach a large dataset, structure the analysis, and translate business questions into actionable insights. To address this, I intentionally broke the project into phases to build confidence and technical depth over time.
 
 ## Project Phases
-### Phase 1:Sample-based analysis using spreadsheets and R
+### Phase 1: Sample-based analysis using spreadsheets and R
 (Completed: September 14, 2025)
 
 ### Phase 2: Full dataset analysis using SQL and Tableau
@@ -19,31 +19,29 @@ As my first full project, the initial challenge was understanding how to approac
 
 Cyclistic is a bike-share company based in Chicago. The company’s Director of Marketing believes that increasing annual memberships is key to long-term growth.
 
-## Business Task
+### Business Task
 
 How do annual members and casual riders use Cyclistic bikes differently?
 
 The goal is to understand usage differences so the marketing team can design targeted strategies to convert casual riders into annual members.
 
-# Rider Types
+#### Rider Types
 
 Casual Riders: Single-ride or full-day pass users
 
 Annual Members: Subscription-based riders
 
-📊 Data Sources
+#### Data Sources
 
 Dataset: Cyclistic (Divvy) trip data
 
 Period: August 2024 – July 2025 (12 months)
 
-Source: Motivate International Inc.
-
 License:
 https://divvybikes.com/data-license-agreement
 
-🧹 Data Cleaning & Preparation
-Phase 1 — Sample-Based Analysis
+## Data Cleaning & Preparation
+### Phase 1 — Sample-Based Analysis
 
 Due to Excel’s row limitations, a statistically representative sample was created:
 
