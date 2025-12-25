@@ -4,7 +4,7 @@ Cyclistic Bike-Share Case Study
 
 Google Data Analytics Capstone Project
 
-📌 Introduction
+Introduction
 
 This project is the final capstone of the Google Data Analytics Professional Certificate (Coursera) and represents my first end-to-end data analytics case study using real-world data.
 
