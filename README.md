@@ -116,7 +116,7 @@ Figure 7 shows that casual riders use the electric options more than members. Th
 
 ## Phase 2 – Completing the analysis using the full dataset; SQL and Tableau
 
-Using SQL, I extracted the data I would need to run the same visualisations and in phase 1. All queries run are found here: sql queries. 
+Using SQL, I extracted the data I would need to run the same visualisations and in phase 1. 
 
 [Tableau Visualization](https://public.tableau.com/views/CyclisticRiders/CyclisticRiders?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
