@@ -43,13 +43,16 @@ https://divvybikes.com/data-license-agreement
 ## Data Cleaning & Preparation
 ### Phase 1 — Sample-Based Analysis
 
-Due to Excel’s row limitations, a statistically representative sample was created: <img width="515" height="318" alt="image" src="https://github.com/user-attachments/assets/a85e6e84-f625-4373-917c-d77c4769cbd8" />
+Due to Excel’s row limitations, a statistically representative sample was created: 
+
+<img width="515" height="318" alt="image" src="https://github.com/user-attachments/assets/a85e6e84-f625-4373-917c-d77c4769cbd8" />
+
 For each month’s file, I calculated the number of entries that would give me 99% confidence level and 1% margin of error. 
 I then loaded each data set into R to extract the number of rows I needed from each file and extracted those files from R. 
 
-__install.packages("tidyverse")
+_install.packages("tidyverse")
 library(tidyverse)
-aug_2024 <- read.csv("C:\\Users\\lldos\\OneDrive\\Desktop\\Google Data Analytics Course\\Cyclistic Case Study\\Original Data\\202408-divvy-tripdata.csv", nrows = 16283)__
+aug_2024 <- read.csv("C:\\Users\\lldos\\OneDrive\\Desktop\\Google Data Analytics Course\\Cyclistic Case Study\\Original Data\\202408-divvy-tripdata.csv", nrows = 16283)_
 
 To clean the data: 
 -	I deleted the longitudes and latitudes columns as I did not require them for my analysis (I had already saved the original data files as is). 
@@ -68,34 +71,13 @@ Month_of_year	=TEXT(“started_at”, "mmmm")
 To determine the season, I assumed the following:
 <img width="635" height="72" alt="image" src="https://github.com/user-attachments/assets/ecef2760-ae3e-4a3f-bceb-57ec623bfc09" />
 
+_IF(OR(MONTH(“STARTED_AT”)=12, MONTH(“STARTED_AT”)<=2), "Winter", IF(AND(MONTH(“STARTED_AT”)>=3, MONTH(“STARTED_AT”)<=5), "Spring", IF(AND(MONTH(“STARTED_AT”)>=6, MONTH(“STARTED_AT”)<=8), "Summer", IF(AND(MONTH(“STARTED_AT”)>=9, MONTH(“STARTED_AT”)<=11), "Fall"))))_
 
+I compared the average ride durations for casual riders and members on a daily, monthly, and seasonal basis to understand the differences between them. This was achieved using pivot tables and an interactive dashboard.
 
-__IF(OR(MONTH(“STARTED_AT”)=12, MONTH(“STARTED_AT”)<=2), "Winter", IF(AND(MONTH(“STARTED_AT”)>=3, MONTH(“STARTED_AT”)<=5), "Spring", IF(AND(MONTH(“STARTED_AT”)>=6, MONTH(“STARTED_AT”)<=8), "Summer", IF(AND(MONTH(“STARTED_AT”)>=9, MONTH(“STARTED_AT”)<=11), "Fall"))))__
+<img width="614" height="427" alt="image" src="https://github.com/user-attachments/assets/9355be39-0244-4e85-817f-a2687d00e1a6" />
+<img width="610" height="439" alt="image" src="https://github.com/user-attachments/assets/deef5707-38ec-451a-ab5e-3067a44b77a9" />
 
-
-Using Excel pivot tables and dashboards, I compared casual riders vs members across:
-
-Daily usage
-
-Monthly trends
-
-Seasonal patterns
-
-Ride duration
-
-Ride counts
-
-Bike type usage
-
-Key Findings
-
-Casual riders consistently take longer rides
-
-Annual members take more rides overall
-
-Casual riders show strong seasonal spikes in summer
-
-Casual riders use electric bikes more frequently
 
 📌 Recommendations
 
