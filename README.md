@@ -43,49 +43,35 @@ https://divvybikes.com/data-license-agreement
 ## Data Cleaning & Preparation
 ### Phase 1 — Sample-Based Analysis
 
-Due to Excel’s row limitations, a statistically representative sample was created:
+Due to Excel’s row limitations, a statistically representative sample was created: <img width="515" height="318" alt="image" src="https://github.com/user-attachments/assets/a85e6e84-f625-4373-917c-d77c4769cbd8" />
+For each month’s file, I calculated the number of entries that would give me 99% confidence level and 1% margin of error. 
+I then loaded each data set into R to extract the number of rows I needed from each file and extracted those files from R. 
 
-99% confidence level
-
-1% margin of error
-
-Sampling performed using R
-
-Example R code used:
-
-install.packages("tidyverse")
+__install.packages("tidyverse")
 library(tidyverse)
+aug_2024 <- read.csv("C:\\Users\\lldos\\OneDrive\\Desktop\\Google Data Analytics Course\\Cyclistic Case Study\\Original Data\\202408-divvy-tripdata.csv", nrows = 16283)__
 
-aug_2024 <- read.csv(
-  "202408-divvy-tripdata.csv",
-  nrows = 16283
-)
+To clean the data: 
+-	I deleted the longitudes and latitudes columns as I did not require them for my analysis (I had already saved the original data files as is). 
+-	I applied conditional formatting to all the cells to check for any blank cells and deleted those as well. 
+-	I checked that the length of the ride_ids was consistent using the LEN() function. 
 
-Cleaning Steps
 
-Removed unused latitude/longitude fields
+## Analysis & Visualization (Phase 1): 
+I calculated the length of each ride (ride_length) and applied conditional formatting to check if there were any rides less than 1 minute as these could have been due to docking errors. I excluded these rows from the data for the analysis. 
+I extracted the following information from the data for the analysis:
+Column	Calculation / Formula
+Ride_duration	started_at – ended_at (formatted as HH:MM:SS)
+Day_of_week	=TEXT(“started_at”, "dddd")
+Month_of_year	=TEXT(“started_at”, "mmmm")
 
-Checked for null values and removed invalid rows
+To determine the season, I assumed the following:
+<img width="635" height="72" alt="image" src="https://github.com/user-attachments/assets/ecef2760-ae3e-4a3f-bceb-57ec623bfc09" />
 
-Verified ride_id length consistency
 
-Removed rides shorter than 1 minute (likely docking errors)
 
-Feature Engineering
-Feature	Method
-Ride Duration	ended_at - started_at
-Day of Week	Extracted from started_at
-Month	Extracted from started_at
-Season	Month-based classification
+__IF(OR(MONTH(“STARTED_AT”)=12, MONTH(“STARTED_AT”)<=2), "Winter", IF(AND(MONTH(“STARTED_AT”)>=3, MONTH(“STARTED_AT”)<=5), "Spring", IF(AND(MONTH(“STARTED_AT”)>=6, MONTH(“STARTED_AT”)<=8), "Summer", IF(AND(MONTH(“STARTED_AT”)>=9, MONTH(“STARTED_AT”)<=11), "Fall"))))__
 
-Season Definition
-
-Season	Months
-Winter	Dec – Feb
-Spring	Mar – May
-Summer	Jun – Aug
-Fall	Sep – Nov
-📈 Analysis & Visualization (Phase 1)
 
 Using Excel pivot tables and dashboards, I compared casual riders vs members across:
 
