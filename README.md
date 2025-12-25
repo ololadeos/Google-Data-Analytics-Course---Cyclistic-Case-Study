@@ -77,25 +77,36 @@ _IF(OR(MONTH(“STARTED_AT”)=12, MONTH(“STARTED_AT”)<=2), "Winter", IF(AND
 I compared the average ride durations for casual riders and members on a daily, monthly, and seasonal basis to understand the differences between them. This was achieved using pivot tables and an interactive dashboard.
 
 _Figure 1: Average Daily Ride Duration_ 
+
 <img width="614" height="427" alt="image" src="https://github.com/user-attachments/assets/9355be39-0244-4e85-817f-a2687d00e1a6" />
 
 _Figure 2: Average Monthly Ride Duration_ 
+
 <img width="610" height="439" alt="image" src="https://github.com/user-attachments/assets/deef5707-38ec-451a-ab5e-3067a44b77a9" />
 
 _Figure 3: Average Seasonal Ride Duration_ 
+
 <img width="611" height="431" alt="image" src="https://github.com/user-attachments/assets/04255cad-3f22-433d-8876-91de60dc867b" />
 
 Figures 1 and 2 show that casual riders have average ride durations that are longer than those of members, day to day and month to month. They also reveal that that the average durations for members are similar across the days and months, with a slight spike during summer months compared to the significant spike for casual riders during the same period (this can be more clearly seen in Figure 3). This could indicate an opportunity to push marketing to casual riders during the summer months. 
 
-_Figure 4: Number of Daily Rides_ <img width="593" height="415" alt="image" src="https://github.com/user-attachments/assets/dd2ecd63-063b-45fd-9b6c-c8ed5522ada1" />
+_Figure 4: Number of Daily Rides_ 
 
-_Figure 5: Number of Monthly Rides_ <img width="593" height="415" alt="image" src="https://github.com/user-attachments/assets/80a7cb85-f9a3-4499-81ce-f796b2eab991" />
+<img width="593" height="415" alt="image" src="https://github.com/user-attachments/assets/dd2ecd63-063b-45fd-9b6c-c8ed5522ada1" />
 
-_Figure 6: Number of Seasonal Rides_ <img width="593" height="415" alt="image" src="https://github.com/user-attachments/assets/68ee2ff2-6aa9-4c5a-a6f9-ee15ad7c22d6" />
+_Figure 5: Number of Monthly Rides_ 
+
+<img width="593" height="415" alt="image" src="https://github.com/user-attachments/assets/80a7cb85-f9a3-4499-81ce-f796b2eab991" />
+
+_Figure 6: Number of Seasonal Rides_ 
+
+<img width="593" height="415" alt="image" src="https://github.com/user-attachments/assets/68ee2ff2-6aa9-4c5a-a6f9-ee15ad7c22d6" />
 
 Despite the longer rides by casual riders shown in Figures 1 – 3, Figures 4 – 6 reveal that there are more annual members taking rides than casual riders on a daily, monthly, and seasonal basis. 
 
-_Figure 7: Number of Rides by Type <img width="593" height="415" alt="image" src="https://github.com/user-attachments/assets/64fe74ca-875b-43bb-bed8-a28fdd7b746c" />
+_Figure 7: Number of Rides by Type 
+
+<img width="593" height="415" alt="image" src="https://github.com/user-attachments/assets/64fe74ca-875b-43bb-bed8-a28fdd7b746c" />
 
 Figure 7 shows that casual riders use the electric options more than members. There could be an opportunity to market around this observation. 
 
